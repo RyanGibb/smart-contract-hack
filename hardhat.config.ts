@@ -6,7 +6,7 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-etherscan";
 
 assert(process.env.PRIVATE_KEY !== undefined, "PRIVATE_KEY not defined");
-assert(process.env.POLYGONSCAN_API_KEY !== undefined, "POLYGONSCAN_API_KEY not defined");
+// assert(process.env.POLYGONSCAN_API_KEY !== undefined, "POLYGONSCAN_API_KEY not defined");
 assert(process.env.INFURA !== undefined, "INFURA not defined");
 
 const config: HardhatUserConfig = {
