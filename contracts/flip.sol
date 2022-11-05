@@ -29,7 +29,7 @@ contract FlipHack {
 
   function transfer() public {
     require(msg.sender == owner, "nope");
-    ERC20(0x0f212DAC9e43e68e9Dc30dbe54cD1aC95236DD05).transferFrom(address(this), owner, ERC20(0x0f212DAC9e43e68e9Dc30dbe54cD1aC95236DD05).balanceOf(address(this));
+    ERC20(0x0f212DAC9e43e68e9Dc30dbe54cD1aC95236DD05).transferFrom(address(this), owner, ERC20(0x0f212DAC9e43e68e9Dc30dbe54cD1aC95236DD05).balanceOf(address(this)));
   }
 
 }

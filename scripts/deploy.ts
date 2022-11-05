@@ -12,16 +12,12 @@ async function main() {
   let provider = new ethers.providers.JsonRpcProvider(`https://polygon-mainnet.infura.io/v3/${INFURA_KEY}`)
   const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
 
-  const CoinFlipFactory = (await ethers.getContractFactory("CoinFlip")).connect(wallet);
+  const FlipHackFactory = (await ethers.getContractFactory("FlipHack")).connect(wallet);
 
-  const gasPrice = 1000000000000;
-  // TODO: Approve CoinFlip to spend CamHack tokens
-  console.log("------------------------CoinFlip---------------------------");
-  const coinFlip = await CoinFlipFactory.deploy({gasPrice});
-  console.log({coinFlip: coinFlip.address});
+  const gasPrice = 100000000000;
+  const flipHack = await FlipHackFactory.deploy({gasPrice});
+  console.log({flipHack: flipHack.address});
 }
-
-// TODO: remember to vault.giveMoneyBack() after the challenge is over
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
