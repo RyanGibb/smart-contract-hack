@@ -18,18 +18,18 @@ contract CoinFlip {
     uint256 blockValue = uint256(blockhash(block.number - 1));
     uint256 coinFlip = blockValue / FACTOR;
     bool side = coinFlip == 1 ? true : false;
-    Flip(0x0a1a3E6f8e3fb2c52C68cC0d87D68b9ab339d5a7).flip(side);
+    Flip(0xc6724Db51bFF2F9dc91f6B814426453ddB844907).flip(side);
     return side;
   }
 
   function claim() public {
     require(msg.sender == owner, "nope");
-    Flip(0x0a1a3E6f8e3fb2c52C68cC0d87D68b9ab339d5a7).claim();
+    Flip(0xc6724Db51bFF2F9dc91f6B814426453ddB844907).claim();
   }
 
   function transfer() public {
     require(msg.sender == owner, "nope");
-    ERC20(0xa522196F3029692b53dC0E308cF1a0685CD6B471).transferFrom(address(this), owner, ERC20(0xa522196F3029692b53dC0E308cF1a0685CD6B471).balanceOf(address(this));
+    ERC20(0x0f212DAC9e43e68e9Dc30dbe54cD1aC95236DD05).transferFrom(address(this), owner, ERC20(0x0f212DAC9e43e68e9Dc30dbe54cD1aC95236DD05).balanceOf(address(this));
   }
 
 }
