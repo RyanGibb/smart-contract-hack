@@ -14,7 +14,7 @@ async function main() {
 
   const CoinFlipFactory = (await ethers.getContractFactory("CoinFlip")).connect(wallet);
 
-  const gasPrice = 850000000000;
+  const gasPrice = 1000000000000;
   // TODO: Approve CoinFlip to spend CamHack tokens
   console.log("------------------------CoinFlip---------------------------");
   const coinFlip = await CoinFlipFactory.deploy({gasPrice});
